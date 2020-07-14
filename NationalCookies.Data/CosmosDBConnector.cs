@@ -17,8 +17,8 @@ namespace NationalCookies.Data
         private readonly string _cookieCollectionName;
         private readonly string _orderCollectionName;
 
-        private static readonly string _cookiePartitionKey = "/Name";
-        private static readonly string _orderPartitionKey = "/Status";
+        private const string _cookiePartitionKey = "/Name";
+        private const string _orderPartitionKey = "/Status";
 
         private readonly DocumentClient _client;
 
@@ -80,7 +80,7 @@ namespace NationalCookies.Data
                     this._cookieCollectionName), queryOptions);
 
 
-            if (cookieQuery.AsEnumerable().FirstOrDefault() == null)
+            if (!cookieQuery.AsEnumerable().Any())
             {
                 InitializeCookies();
 

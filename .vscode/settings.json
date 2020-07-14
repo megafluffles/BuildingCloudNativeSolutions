@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/e0a743fe-8b1c-4c84-8712-cf233bc575db/resourceGroups/pluralsight-cloud-native-apps-course/providers/Microsoft.Web/sites/cookiesf43f34f3",
+    "appService.deploySubpath": "."
+}
